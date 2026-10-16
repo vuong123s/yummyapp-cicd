@@ -3,3 +3,7 @@ __pycache__/
 .coverage
 coverage_html/
 *.zip
+*.html
+BaoCao_KetQua_*
+MinhChung_VietTay_*
+HUONG_DAN_VIET_TAY_*
