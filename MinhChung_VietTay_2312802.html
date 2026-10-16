@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Minh Chứng Viết Tay - 2312802 - Phan Khánh Vương</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 15mm 18mm 15mm;
+    }
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      color: #1a202c;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+    .page-header {
+      border-bottom: 2px solid #2b6cb0;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .page-header-info {
+      font-size: 13px;
+    }
+    .page-header-info strong {
+      color: #2b6cb0;
+    }
+    .page-title {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #2b6cb0;
+      margin-top: 4px;
+    }
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+    .box {
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      background: #f8fafc;
+    }
+    .flow-step {
+      border: 2px solid #3182ce;
+      background: #ebf8ff;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      font-weight: 600;
+      text-align: center;
+    }
+    .flow-arrow {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #3182ce;
+      line-height: 1;
+    }
+    table.custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    table.custom-table th, table.custom-table td {
+      border: 1px solid #4a5568;
+      padding: 7px 9px;
+      vertical-align: top;
+    }
+    table.custom-table th {
+      background-color: #e2e8f0;
+      font-weight: bold;
+      text-align: center;
+    }
+    .question-title {
+      font-weight: bold;
+      color: #2c5282;
+      font-size: 13.5px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      border-left: 3px solid #3182ce;
+      padding-left: 6px;
+    }
+    .answer-body {
+      margin-left: 10px;
+      text-align: justify;
+    }
+    .signature-area {
+      border: 1px dashed #718096;
+      border-radius: 4px;
+      padding: 4px 10px;
+      display: inline-block;
+      float: right;
+      text-align: center;
+      background: #fff;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TRANG 1 ==================== -->
+  <div class="clearfix page-header">
+    <div class="page-header-info">
+      <div><strong>Họ và tên:</strong> Phan Khánh Vương &nbsp;|&nbsp; <strong>MSSV:</strong> 2312802</div>
+      <div><strong>Học phần:</strong> Kiểm thử Phần mềm &nbsp;|&nbsp; <strong>Ngày thực hành:</strong> 16/10/2026</div>
+      <div class="page-title">TRANG 1: SƠ ĐỒ LUỒNG KIẾN TRÚC CI PIPELINE</div>
+    </div>
+    <div class="signature-area">
+      <div style="font-size: 11px; color: #4a5568;">Chữ ký xác thực</div>
+      <div style="font-family: 'Brush Script MT', cursive, sans-serif; font-size: 20px; color: #2b6cb0; height: 26px; line-height: 26px;">Phan Khánh Vương</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <p><em>Sơ đồ khối mô tả kiến trúc đường ống CI Pipeline tự động hóa với GitHub Actions (gồm đầy đủ 6 khối chức năng cốt lõi):</em></p>
+
+    <div class="flow-step">
+      1. SỰ KIỆN KÍCH HOẠT (TRIGGER EVENT)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #4a5568;">Sự kiện push hoặc pull_request vào nhánh chính (main)</span>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+
+    <div class="flow-step">
+      2. CHECKOUT MÃ NGUỒN (CHECKOUT CODE)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #4a5568;">actions/checkout@v4 &rarr; Tải toàn bộ mã nguồn về máy chủ ảo sạch (Ubuntu runner)</span>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+
+    <div class="flow-step">
+      3. THIẾT LẬP MÔI TRƯỜNG PYTHON (SETUP ENVIRONMENT)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #4a5568;">actions/setup-python@v5 &rarr; Cài đặt chính xác Python phiên bản 3.11</span>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+
+    <div class="flow-step">
+      4. CÀI ĐẶT THƯ VIỆN PHỤ THUỘC (INSTALL DEPENDENCIES)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #4a5568;">pip install -r requirements.txt &rarr; Cài đặt thư viện đã ghim phiên bản (requests, coverage, flake8)</span>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+
+    <div class="flow-step" style="border-color: #dd6b20; background: #fffaf0;">
+      5. KIỂM TRA CÚ PHÁP TĨNH (STATIC CODE ANALYSIS - LINTER)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #7b341e;">
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics<br>
+        <strong>Nguyên lý Fail-Fast:</strong> Nếu phát hiện lỗi cú pháp, Exit Code &ne; 0 &rarr; <strong>BREAK THE BUILD NGAY LẬP TỨC</strong>
+      </span>
+    </div>
+    <div class="flow-arrow">&darr; <span style="font-size: 12px; color: #276749; font-weight: bold;">(Linter sạch: Exit Code = 0)</span></div>
+
+    <div class="flow-step" style="border-color: #38a169; background: #f0fff4;">
+      6. THỰC THI KIỂM THỬ VÀ CỔNG CHẤT LƯỢNG (TESTS & QUALITY GATE)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #22543d;">
+        Execute Unit Tests (Mocking GPS) &rarr; coverage report --fail-under=80<br>
+        <strong>Quality Gate:</strong> Nếu Coverage &lt; 80% &rarr; Exit Code = 2 &rarr; <strong>BUILD FAILED (BÁO ĐỎ)</strong><br>
+        Nếu Coverage &ge; 80% &rarr; Exit Code = 0 &rarr; <strong>BUILD PASSED (TÍCH XANH)</strong>
+      </span>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+
+    <div class="flow-step">
+      7. LƯU TRỮ VÀ XUẤT ARTIFACTS (UPLOAD HTML REPORT)<br>
+      <span style="font-size: 11.5px; font-weight: normal; color: #4a5568;">actions/upload-artifact@v4 (if: always()) &rarr; Lưu trữ báo cáo coverage_html/ trong 7 ngày</span>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ==================== TRANG 2 ==================== -->
+  <div class="clearfix page-header">
+    <div class="page-header-info">
+      <div><strong>Họ và tên:</strong> Phan Khánh Vương &nbsp;|&nbsp; <strong>MSSV:</strong> 2312802</div>
+      <div><strong>Học phần:</strong> Kiểm thử Phần mềm &nbsp;|&nbsp; <strong>Ngày thực hành:</strong> 16/10/2026</div>
+      <div class="page-title">TRANG 2: BẢNG MA TRẬN THIẾT KẾ KỊCH BẢN TEST CASE MOCKING</div>
+    </div>
+    <div class="signature-area">
+      <div style="font-size: 11px; color: #4a5568;">Chữ ký xác thực</div>
+      <div style="font-family: 'Brush Script MT', cursive, sans-serif; font-size: 20px; color: #2b6cb0; height: 26px; line-height: 26px;">Phan Khánh Vương</div>
+    </div>
+  </div>
+
+  <p><em>Ma trận thiết kế chi tiết 7 kịch bản kiểm thử ngoại vi cho dịch vụ mạng và phần cứng GPS:</em></p>
+
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th style="width: 28%;">Tên Test Case</th>
+        <th style="width: 20%;">Hàm được gọi</th>
+        <th style="width: 27%;">Đối tượng & Giá trị Mocking</th>
+        <th style="width: 25%;">Kết quả kỳ vọng (Assert)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. test_apply_promo_online_valid</strong></td>
+        <td><code>apply_promo_code</code></td>
+        <td>Không mock.<br>Trạng thái: <code>network_status="online"</code>, <code>os_version=15</code>, mã <code>"GIAM10"</code></td>
+        <td>Áp dụng giảm 10% thành công.<br><code>assertEqual(result, 90000.0)</code></td>
+      </tr>
+      <tr>
+        <td><strong>2. test_apply_promo_offline_raises_connection_error</strong></td>
+        <td><code>apply_promo_code</code></td>
+        <td>Không mock.<br>Trạng thái: <code>network_status="offline"</code>, <code>os_version=15</code>, mã <code>"GIAM10"</code></td>
+        <td>Bị chặn do mất kết nối mạng.<br><code>assertRaises(ConnectionError)</code></td>
+      </tr>
+      <tr>
+        <td><strong>3. test_apply_promo_special_code_os15</strong></td>
+        <td><code>apply_promo_code</code></td>
+        <td>Không mock.<br>Trạng thái: <code>network_status="online"</code>, <code>os_version=15</code>, mã <code>"NEW_OS_ONLY"</code></td>
+        <td>Áp dụng giảm 20% thành công trên OS 15.<br><code>assertEqual(result, 80000.0)</code></td>
+      </tr>
+      <tr>
+        <td><strong>4. test_apply_promo_special_code_os14_raises_value_error</strong></td>
+        <td><code>apply_promo_code</code></td>
+        <td>Không mock.<br>Trạng thái: <code>network_status="online"</code>, <code>os_version=14</code>, mã <code>"NEW_OS_ONLY"</code></td>
+        <td>Ném ngoại lệ do phiên bản OS không đủ (cần &ge; 15).<br><code>assertRaises(ValueError)</code></td>
+      </tr>
+      <tr>
+        <td><strong>5. test_get_nearby_restaurants_in_range</strong></td>
+        <td><code>get_nearby_restaurants</code></td>
+        <td>Mock <code>gps_service.get_current_location</code>:<br><code>return_value = (10.0, 105.0)</code></td>
+        <td>Trả về danh sách 2 nhà hàng tương ứng tọa độ:<br><code>["Nha hang Pho Ly Quoc Su", "Bun cha Huong Lien"]</code></td>
+      </tr>
+      <tr>
+        <td><strong>6. test_get_nearby_restaurants_out_of_range</strong></td>
+        <td><code>get_nearby_restaurants</code></td>
+        <td>Mock <code>gps_service.get_current_location</code>:<br><code>return_value = (20.0, 110.0)</code></td>
+        <td>Tọa độ không có đối tác, trả về danh sách rỗng:<br><code>assertEqual(restaurants, [])</code></td>
+      </tr>
+      <tr>
+        <td><strong>7. test_get_nearby_restaurants_signal_lost</strong></td>
+        <td><code>get_nearby_restaurants</code></td>
+        <td>Mock <code>gps_service.get_current_location</code>:<br><code>side_effect = GPSSignalLostError()</code></td>
+        <td>Bắt ngoại lệ mất GPS và trả về chuỗi thông báo:<br><code>"Khong the xac dinh vi tri."</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- ==================== TRANG 3 ==================== -->
+  <div class="clearfix page-header">
+    <div class="page-header-info">
+      <div><strong>Họ và tên:</strong> Phan Khánh Vương &nbsp;|&nbsp; <strong>MSSV:</strong> 2312802</div>
+      <div><strong>Học phần:</strong> Kiểm thử Phần mềm &nbsp;|&nbsp; <strong>Ngày thực hành:</strong> 16/10/2026</div>
+      <div class="page-title">TRANG 3: LỜI GIẢI CÂU HỎI PHÂN TÍCH CẤP ĐỘ 2</div>
+    </div>
+    <div class="signature-area">
+      <div style="font-size: 11px; color: #4a5568;">Chữ ký xác thực</div>
+      <div style="font-family: 'Brush Script MT', cursive, sans-serif; font-size: 20px; color: #2b6cb0; height: 26px; line-height: 26px;">Phan Khánh Vương</div>
+    </div>
+  </div>
+
+  <div class="question-title">Câu 2.1: Tại sao bước chạy Linter (flake8) phải đặt trước bước chạy test trong đường ống CI?</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ol>
+      <li>
+        <strong>Thực thi nguyên lý "Thất bại sớm" (Fail-Fast):</strong>
+        Linter (flake8) thực hiện phân tích mã tĩnh (Static Code Analysis) nhằm phát hiện ngay các lỗi cú pháp nghiêm trọng (SyntaxError, sai thụt lề IndentationError, gọi biến chưa khai báo F82, import dư thừa...). Quá trình quét tĩnh này không cần thực thi code nên diễn ra cực kỳ nhanh (chỉ mất 1 - 2 giây), nhẹ hơn rất nhiều so với việc khởi chạy môi trường máy ảo và thực thi toàn bộ bộ Unit Test.
+      </li>
+      <li>
+        <strong>Tiết kiệm tối đa tài nguyên và thời gian máy chủ CI:</strong>
+        Nếu mã nguồn có lỗi cú pháp, bộ test chắc chắn sẽ sập (crash) hoặc thất bại. Việc đặt Linter trước giúp phát hiện và dừng pipeline ngay lập tức, tránh lãng phí thời gian runner và tiết kiệm hạn ngạch tính toán (GitHub Actions minutes).
+      </li>
+      <li>
+        <strong>Bảo đảm chuẩn mực phong cách mã nguồn:</strong>
+        Đảm bảo code tuân thủ nghiêm ngặt chuẩn PEP 8 trước khi tiến hành xác minh nghiệp vụ.
+      </li>
+    </ol>
+  </div>
+
+  <div class="question-title">Câu 2.2: Tham số --fail-under=80 của lệnh coverage report hoạt động theo nguyên lý nào trong hệ điều hành Linux để báo hiệu cho GitHub Actions dừng tiến trình build?</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ol>
+      <li>
+        <strong>Nguyên lý Mã thoát (Exit Code / Return Code) trong POSIX/Linux:</strong>
+        Trong hệ điều hành Linux, mỗi tiến trình (process) khi kết thúc đều gửi về cho tiến trình cha một giá trị số nguyên nguyên thủy gọi là Exit Code:
+        <ul>
+          <li>Mã <code>0</code>: Đại diện cho trạng thái thực thi thành công hoàn toàn (Success).</li>
+          <li>Mã khác <code>0</code> (Non-zero, từ 1 đến 255): Đại diện cho lỗi hoặc điều kiện thất bại (Failure).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cơ chế hoạt động của tham số <code>--fail-under=80</code>:</strong>
+        Khi công cụ <code>coverage</code> tổng hợp báo cáo:
+        <ul>
+          <li>Nếu tổng tỷ lệ bao phủ mã nguồn &ge; 80%: Công cụ kết thúc bình thường và trả về Exit Code = <code>0</code>.</li>
+          <li>Nếu tỷ lệ bao phủ &lt; 80%: Công cụ in thông báo lỗi và chủ động gọi <code>sys.exit(2)</code> để trả về Exit Code = <code>2</code> (khác 0).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cơ chế dừng tiến trình của GitHub Actions:</strong>
+        Mỗi step shell trên runner Ubuntu mặc định hoạt động với cơ chế kiểm tra biến trạng thái <code>$?</code> (tương đương lệnh <code>set -e</code>). Khi nhận Exit Code khác 0, runner lập tức đánh dấu step và job đó là FAILED (Báo Đỏ) và hủy toàn bộ các bước tiếp theo.
+      </li>
+    </ol>
+  </div>
+
+  <div class="question-title">Câu 2.3: Tham số -m trong lệnh coverage report -m hiển thị thêm thông tin gì và giúp ích gì cho kỹ sư kiểm thử khi tối ưu độ bao phủ mã nguồn?</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ul>
+      <li>
+        <strong>Thông tin hiển thị:</strong> Tham số <code>-m</code> (viết tắt của <code>--show-missing</code>) bổ sung thêm cột <strong>"Missing"</strong> trong bảng thống kê ở terminal. Cột này chỉ rõ danh sách số dòng (Line Numbers) hoặc khoảng dòng cụ thể chưa từng được thực thi qua trong lần chạy test (ví dụ: <code>34-43, 47-52</code>).
+      </li>
+      <li>
+        <strong>Lợi ích đối với Kỹ sư kiểm thử (SET):</strong>
+        <ul>
+          <li><strong>Xóa bỏ phỏng đoán:</strong> Kỹ sư biết chính xác nhánh rẽ nào (nhánh <code>if</code>, <code>else</code> hay <code>except</code>) chưa được kiểm tra mà không phải dò thủ công.</li>
+          <li><strong>Thiết kế kịch bản có định hướng:</strong> Nhìn vào dòng thiếu để bổ sung đúng test case cần thiết (ví dụ thấy thiếu dòng ném <code>ConnectionError</code> thì viết ngay test cho trạng thái offline).</li>
+          <li><strong>Tối ưu hóa thời gian:</strong> Giúp nâng cao tỷ lệ bao phủ vượt ngưỡng Quality Gate một cách nhanh nhất.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ==================== TRANG 4 ==================== -->
+  <div class="clearfix page-header">
+    <div class="page-header-info">
+      <div><strong>Họ và tên:</strong> Phan Khánh Vương &nbsp;|&nbsp; <strong>MSSV:</strong> 2312802</div>
+      <div><strong>Học phần:</strong> Kiểm thử Phần mềm &nbsp;|&nbsp; <strong>Ngày thực hành:</strong> 16/10/2026</div>
+      <div class="page-title">TRANG 4: LỜI GIẢI CÂU HỎI PHÂN TÍCH CẤP ĐỘ 3</div>
+    </div>
+    <div class="signature-area">
+      <div style="font-size: 11px; color: #4a5568;">Chữ ký xác thực</div>
+      <div style="font-family: 'Brush Script MT', cursive, sans-serif; font-size: 20px; color: #2b6cb0; height: 26px; line-height: 26px;">Phan Khánh Vương</div>
+    </div>
+  </div>
+
+  <div class="question-title">Câu 3.1: Phân biệt giữa khái niệm Flaky Test và lỗi do sai lệch môi trường phụ thuộc.</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ul>
+      <li>
+        <strong>Flaky Test (Kiểm thử chập chờn / Không ổn định):</strong>
+        <ul>
+          <li><em>Định nghĩa:</em> Là bài test cho ra các kết quả khác nhau (lúc Pass, lúc Fail) dù mã nguồn giữ nguyên và chạy trên cùng một môi trường.</li>
+          <li><em>Nguyên nhân:</em> Do các yếu tố bất định (non-deterministic): tranh chấp tài nguyên đa luồng (race conditions), độ trễ mạng khi gọi dịch vụ ngoài thật (external API timeout, latency), thứ tự thực thi test ngẫu nhiên, hoặc phụ thuộc vào thời gian/múi giờ hệ thống.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Lỗi do sai lệch môi trường phụ thuộc (Environment / Dependency Drift):</strong>
+        <ul>
+          <li><em>Định nghĩa:</em> Là lỗi xảy ra khi test luôn Pass ổn định trên môi trường này (ví dụ máy local của lập trình viên) nhưng luôn Fail xác định trên môi trường khác (ví dụ máy chủ CI hoặc máy staging).</li>
+          <li><em>Nguyên nhân:</em> Do sự không đồng nhất về cấu hình hệ thống: khác biệt hệ điều hành (Windows vs Linux), sai lệch phiên bản Python (Python 3.10 vs 3.14), hoặc thư viện phụ thuộc có phiên bản khác nhau giữa các máy.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Điểm khác biệt cốt lõi:</strong> Flaky Test mang tính bất định (ngẫu nhiên) ngay trên cùng một môi trường (khắc phục bằng Mocking); còn Sai lệch môi trường mang tính xác định giữa các môi trường khác nhau (khắc phục bằng Ghim phiên bản và Container hóa).
+      </li>
+    </ul>
+  </div>
+
+  <div class="question-title">Câu 3.2: Tại sao trên máy chủ CI bắt buộc phải tuân thủ nguyên tắc ghim phiên bản (Version Pinning) trong requirements.txt?</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ol>
+      <li>
+        <strong>Đảm bảo tính tái lập (Reproducibility):</strong> Máy chủ CI là môi trường tạm thời (ephemeral), mỗi lần chạy đều cài mới hoàn toàn thư viện. Ghim phiên bản chuẩn xác (dùng <code>==</code>, ví dụ <code>coverage==7.4.0</code>) bảo đảm máy chủ CI luôn có môi trường đồng nhất 100% với máy phát triển của lập trình viên.
+      </li>
+      <li>
+        <strong>Ngăn chặn lỗi phá vỡ tương thích (Breaking Changes):</strong> Nếu không ghim phiên bản (hoặc dùng <code>&gt;=</code>), khi một thư viện bên thứ ba phát hành bản mới có thay đổi API hoặc lỗi ngầm, đường ống CI sẽ tự động tải bản mới và bị sập ("vỡ build") đột ngột dù mã dự án không hề có lỗi.
+      </li>
+      <li>
+        <strong>Bảo mật chuỗi cung ứng (Supply Chain Security):</strong> Tránh việc CI tự động kéo về các phiên bản độc hại (malicious packages) mới bị phát tán trên PyPI trước khi được đội ngũ phát triển kiểm duyệt.
+      </li>
+    </ol>
+  </div>
+
+  <div class="question-title">Câu 3.3: Trình bày quy trình 6 bước chuẩn để nâng cấp một thư viện lên phiên bản mới an toàn qua Pull Request mà không làm gián đoạn nhánh main.</div>
+  <div class="answer-body">
+    <p><strong>Lời giải:</strong></p>
+    <ol>
+      <li><strong>Bước 1 - Tạo nhánh làm việc độc lập:</strong> Từ nhánh <code>main</code> mới nhất, rẽ một nhánh riêng (ví dụ: <code>git checkout -b chore/upgrade-requests</code>). Tuyệt đối không nâng cấp trực tiếp trên <code>main</code>.</li>
+      <li><strong>Bước 2 - Cập nhật tệp requirements.txt:</strong> Đổi số phiên bản của thư viện cần nâng cấp trong <code>requirements.txt</code> sang bản mới. Đọc kỹ Release Notes để nắm các breaking changes.</li>
+      <li><strong>Bước 3 - Cài đặt và kiểm thử cục bộ:</strong> Chạy <code>pip install -r requirements.txt</code> trên máy cá nhân, thực thi toàn bộ test suite và linter. Nếu có lỗi do đổi API, tiến hành refactor code tương ứng cho đến khi toàn bộ test đều Pass.</li>
+      <li><strong>Bước 4 - Commit và đẩy nhánh lên GitHub:</strong> Commit thay đổi với thông điệp rõ ràng và đẩy nhánh lên remote repo (<code>git push origin chore/upgrade-requests</code>).</li>
+      <li><strong>Bước 5 - Tạo Pull Request (PR) và xác minh qua CI Pipeline:</strong> Tạo PR vào <code>main</code>. Đường ống CI tự động kích hoạt trên máy ảo Ubuntu để kiểm tra linter và test suite. Đảm bảo toàn bộ checks đều hiển thị tích Xanh.</li>
+      <li><strong>Bước 6 - Review mã nguồn và Merge:</strong> Yêu cầu đồng nghiệp hoặc Tech Lead Code Review. Khi PR được duyệt và CI xanh, tiến hành hợp nhất vào <code>main</code> (Squash & Merge) và xóa nhánh tạm.</li>
+    </ol>
+  </div>
+
+</body>
+</html>
