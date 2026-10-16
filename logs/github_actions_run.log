@@ -1,0 +1,132 @@
+2026-10-16T06:45:00.1042315Z ##[group]Operating System
+2026-10-16T06:45:00.1043120Z Ubuntu
+2026-10-16T06:45:00.1043540Z 24.04.1
+2026-10-16T06:45:00.1044010Z LTS
+2026-10-16T06:45:00.1044450Z ##[endgroup]
+2026-10-16T06:45:00.1045230Z ##[group]Runner Image
+2026-10-16T06:45:00.1045680Z Image: ubuntu-24.04
+2026-10-16T06:45:00.1046120Z Version: 20261012.1.0
+2026-10-16T06:45:00.1047150Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.1/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-16T06:45:00.1048120Z ##[endgroup]
+2026-10-16T06:45:00.1051230Z ##[group]GITHUB_TOKEN Permissions
+2026-10-16T06:45:00.1052140Z Contents: read
+2026-10-16T06:45:00.1052670Z Metadata: read
+2026-10-16T06:45:00.1053120Z Packages: read
+2026-10-16T06:45:00.1053590Z ##[endgroup]
+2026-10-16T06:45:00.1056780Z Secret source: Actions
+2026-10-16T06:45:00.1057450Z Prepare workflow run
+2026-10-16T06:45:00.1061200Z Preparing worker node
+2026-10-16T06:45:00.1062000Z Prepare all required actions
+2026-10-16T06:45:00.1063100Z Getting action download info
+2026-10-16T06:45:00.3204500Z Download action repository 'actions/checkout@v4' (SHA:eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871)
+2026-10-16T06:45:00.7501200Z Download action repository 'actions/setup-python@v5' (SHA:0a5c61591373683505ea898e09a3ea4f39ef2b9c)
+2026-10-16T06:45:01.1203400Z Download action repository 'actions/upload-artifact@v4' (SHA:b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882)
+2026-10-16T06:45:01.4501100Z Complete job initialization
+2026-10-16T06:45:01.5512300Z ##[group]Run 1. Checkout Source Code
+2026-10-16T06:45:01.5513200Z with:
+2026-10-16T06:45:01.5513700Z   repository: 2312802/yummyapp-cicd
+2026-10-16T06:45:01.5514200Z   token: ***
+2026-10-16T06:45:01.5514700Z   ssh-strict: true
+2026-10-16T06:45:01.5515200Z   persist-credentials: true
+2026-10-16T06:45:01.5515700Z   clean: true
+2026-10-16T06:45:01.5516200Z   fetch-depth: 1
+2026-10-16T06:45:01.5516700Z   lfs: false
+2026-10-16T06:45:01.5517200Z   submodules: false
+2026-10-16T06:45:01.5517700Z   set-safe-directory: true
+2026-10-16T06:45:01.5518200Z ##[endgroup]
+2026-10-16T06:45:01.6231400Z Syncing repository: 2312802/yummyapp-cicd
+2026-10-16T06:45:01.6232500Z Getting Git version info
+2026-10-16T06:45:01.6281000Z Working directory is '/home/runner/work/yummyapp-cicd/yummyapp-cicd'
+2026-10-16T06:45:01.6282300Z [command]/usr/bin/git version
+2026-10-16T06:45:01.6351200Z git version 2.47.0
+2026-10-16T06:45:01.6394500Z Initializing the repository
+2026-10-16T06:45:01.6421000Z [command]/usr/bin/git init /home/runner/work/yummyapp-cicd/yummyapp-cicd
+2026-10-16T06:45:01.6512300Z Initialized empty Git repository in /home/runner/work/yummyapp-cicd/yummyapp-cicd/.git/
+2026-10-16T06:45:01.6534500Z [command]/usr/bin/git remote add origin https://github.com/2312802/yummyapp-cicd
+2026-10-16T06:45:01.7821000Z [command]/usr/bin/git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+2026-10-16T06:45:01.9543100Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-16T06:45:01.9654000Z Switched to a new branch 'main'
+2026-10-16T06:45:01.9712000Z branch 'main' set up to track 'origin/main'.
+2026-10-16T06:45:01.9734000Z ##[group]Run 2. Set up Python Environment
+2026-10-16T06:45:01.9735000Z with:
+2026-10-16T06:45:01.9735500Z   python-version: 3.11
+2026-10-16T06:45:01.9736000Z   check-latest: false
+2026-10-16T06:45:01.9736500Z ##[endgroup]
+2026-10-16T06:45:02.1245000Z Successfully set up Python 3.11.9
+2026-10-16T06:45:02.1267000Z [command]/opt/hostedtoolcache/Python/3.11.9/x64/bin/python --version
+2026-10-16T06:45:02.1311000Z Python 3.11.9
+2026-10-16T06:45:02.1332000Z ##[group]Run 3. Install Dependencies
+2026-10-16T06:45:02.1333000Z python -m pip install --upgrade pip
+2026-10-16T06:45:02.1333500Z pip install -r requirements.txt
+2026-10-16T06:45:02.1334000Z ##[endgroup]
+2026-10-16T06:45:02.7821000Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages (24.0)
+2026-10-16T06:45:03.1124000Z Collecting requests==2.31.0 (from -r requirements.txt (line 1))
+2026-10-16T06:45:03.1542000Z   Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+2026-10-16T06:45:03.1812000Z Collecting coverage==7.4.0 (from -r requirements.txt (line 2))
+2026-10-16T06:45:03.2241000Z   Downloading coverage-7.4.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (238 kB)
+2026-10-16T06:45:03.2654000Z Collecting flake8==7.0.0 (from -r requirements.txt (line 3))
+2026-10-16T06:45:03.2981000Z   Downloading flake8-7.0.0-py2.py3-none-any.whl (57 kB)
+2026-10-16T06:45:03.3241000Z Collecting charset-normalizer<4,>=2 (from requests==2.31.0->-r requirements.txt (line 1))
+2026-10-16T06:45:03.3512000Z   Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (140 kB)
+2026-10-16T06:45:03.3752000Z Collecting idna<4,>=2.5 (from requests==2.31.0->-r requirements.txt (line 1))
+2026-10-16T06:45:03.3981000Z   Downloading idna-3.7-py3-none-any.whl (66 kB)
+2026-10-16T06:45:03.4215000Z Collecting urllib3<3,>=1.21.1 (from requests==2.31.0->-r requirements.txt (line 1))
+2026-10-16T06:45:03.4542000Z   Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+2026-10-16T06:45:03.4781000Z Collecting certifi>=2017.4.17 (from requests==2.31.0->-r requirements.txt (line 1))
+2026-10-16T06:45:03.5012000Z   Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+2026-10-16T06:45:03.5281000Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8==7.0.0->-r requirements.txt (line 3))
+2026-10-16T06:45:03.5451000Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-10-16T06:45:03.5682000Z Collecting pycodestyle<2.12.0,>=2.11.0 (from flake8==7.0.0->-r requirements.txt (line 3))
+2026-10-16T06:45:03.5912000Z   Downloading pycodestyle-2.11.1-py2.py3-none-any.whl (31 kB)
+2026-10-16T06:45:03.6124000Z Collecting pyflakes<3.3.0,>=3.2.0 (from flake8==7.0.0->-r requirements.txt (line 3))
+2026-10-16T06:45:03.6351000Z   Downloading pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+2026-10-16T06:45:03.8124000Z Installing collected packages: urllib3, pyflakes, pycodestyle, mccabe, idna, charset-normalizer, certifi, requests, flake8, coverage
+2026-10-16T06:45:04.9124000Z Successfully installed certifi-2024.2.2 charset-normalizer-3.3.2 coverage-7.4.0 flake8-7.0.0 idna-3.7 mccabe-0.7.0 pycodestyle-2.11.1 pyflakes-3.2.0 requests-2.31.0 urllib3-2.2.1
+2026-10-16T06:45:04.9451000Z ##[group]Run 4. Static Code Analysis (Linter)
+2026-10-16T06:45:04.9452000Z flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+2026-10-16T06:45:04.9453000Z ##[endgroup]
+2026-10-16T06:45:05.1241000Z 0
+2026-10-16T06:45:05.1512000Z ##[group]Run 5. Execute Tests & Quality Gate
+2026-10-16T06:45:05.1513000Z coverage run -m unittest discover -s . -p "test_*.py"
+2026-10-16T06:45:05.1513500Z coverage report -m
+2026-10-16T06:45:05.1514000Z coverage html -d coverage_html
+2026-10-16T06:45:05.1514500Z coverage report --fail-under=80
+2026-10-16T06:45:05.1515000Z ##[endgroup]
+2026-10-16T06:45:05.3421000Z .............
+2026-10-16T06:45:05.3422000Z ----------------------------------------------------------------------
+2026-10-16T06:45:05.3422500Z Ran 13 tests in 0.007s
+2026-10-16T06:45:05.3423000Z 
+2026-10-16T06:45:05.3423500Z OK
+2026-10-16T06:45:05.4121000Z Name                Stmts   Miss  Cover   Missing
+2026-10-16T06:45:05.4122000Z -------------------------------------------------
+2026-10-16T06:45:05.4122500Z gps_service.py          4      0   100%
+2026-10-16T06:45:05.4123000Z test_yummy_app.py      66      1    98%   110
+2026-10-16T06:45:05.4123500Z yummy_app.py           30      0   100%
+2026-10-16T06:45:05.4124000Z -------------------------------------------------
+2026-10-16T06:45:05.4124500Z TOTAL                 100      1    99%
+2026-10-16T06:45:05.4851000Z Wrote HTML report to coverage_html/index.html
+2026-10-16T06:45:05.5121000Z Name                Stmts   Miss  Cover
+2026-10-16T06:45:05.5122000Z ---------------------------------------
+2026-10-16T06:45:05.5122500Z gps_service.py          4      0   100%
+2026-10-16T06:45:05.5123000Z test_yummy_app.py      66      1    98%
+2026-10-16T06:45:05.5123500Z yummy_app.py           30      0   100%
+2026-10-16T06:45:05.5124000Z ---------------------------------------
+2026-10-16T06:45:05.5124500Z TOTAL                 100      1    99%
+2026-10-16T06:45:05.5341000Z ##[group]Run 6. Upload HTML Coverage Report Artifact
+2026-10-16T06:45:05.5342000Z with:
+2026-10-16T06:45:05.5342500Z   name: YummyApp-Coverage-Report
+2026-10-16T06:45:05.5343000Z   path: coverage_html/
+2026-10-16T06:45:05.5343500Z   retention-days: 7
+2026-10-16T06:45:05.5344000Z   compression-level: 6
+2026-10-16T06:45:05.5344500Z   overwrite: false
+2026-10-16T06:45:05.5345000Z ##[endgroup]
+2026-10-16T06:45:05.6121000Z Starting artifact upload
+2026-10-16T06:45:05.6122000Z For more detailed logs during the upload process, consider enabling runner diagnostic logging by setting the ACTIONS_RUNNER_DEBUG secret to true
+2026-10-16T06:45:05.7451000Z Container for artifact "YummyApp-Coverage-Report" successfully created.
+2026-10-16T06:45:05.8924000Z Total size of all the files uploaded is 42187 bytes
+2026-10-16T06:45:05.9125000Z File upload process finished, success: true, failed: 0
+2026-10-16T06:45:05.9128000Z Artifact YummyApp-Coverage-Report has been successfully uploaded!
+2026-10-16T06:45:05.9131000Z Artifact ID: 198421095
+2026-10-16T06:45:05.9134000Z Artifact URL: https://github.com/2312802/yummyapp-cicd/actions/runs/11367891240/artifacts/198421095
+2026-10-16T06:45:05.9181000Z Post job cleanup.
+2026-10-16T06:45:05.9612000Z Complete job
