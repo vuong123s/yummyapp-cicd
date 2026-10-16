@@ -50,3 +50,8 @@ class YummyApp:
             return RESTAURANTS_BY_LOCATION.get(location_key, [])
         except gps_service.GPSSignalLostError:
             return "Khong the xac dinh vi tri."
+
+
+# Ham co tinh gay loi cu phap de kiem tra Linter (Break the Build)
+def broken_syntax_function(
+
