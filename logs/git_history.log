@@ -1,0 +1,8 @@
+* c157d81 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:44:04 2026 +0700): Cap nhat day du file logs minh chung (Tiet 4)
+* 42981a6 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:42:59 2026 +0700): Cau hinh xuat Artifacts HTML Coverage Report trong file YAML (Tiet 4)
+* e76a44e - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:42:38 2026 +0700): Phuc hoi Break the Build: Xoa loi cu phap dua build ve trang thai Xanh (Tiet 4)
+* 7e34805 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:42:15 2026 +0700): Thuc hanh Break the Build: Co tinh tao loi cu phap de Linter bat loi (Tiet 4)
+* b49c077 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:41:34 2026 +0700): Bo sung TestMediumLevel va TestHardLevel dat 99% coverage vuot Quality Gate (Tiet 3)
+* 9263fb6 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:40:43 2026 +0700): Kich hoat Quality Gate (Linter va Coverage fail-under=80) (Tiet 3)
+* a205aa3 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:40:17 2026 +0700): Thiet lap duong ong CI co ban voi GitHub Actions (Tiet 2)
+* 579cfc4 - 2312802 - Phan Khanh Vuong (Fri Oct 16 13:39:57 2026 +0700): Khoi tao du an YummyApp va bo test co ban (Tiet 1)
